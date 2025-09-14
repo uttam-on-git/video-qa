@@ -1,0 +1,17 @@
+{
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "printWidth": 80,
+    "proseWrap": "never",
+    "singleQuote": true,
+    "semi": true,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "overrides": [
+        {
+            "files": ["*.jsx", "*.tsx", "*.html"],
+            "options": { "tabWidth": 2 }
+        }
+    ]
+}
