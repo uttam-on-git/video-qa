@@ -3,11 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
+    "watch:build": "tsc -w",
+    "watch:run": "nodemon dist/index.js",
+    "dev": "npm-run-all --parallel watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.12.4"
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "triple-beam": "^1.4.1",
+    "winston": "^3.17.0",
+    "winston-transport": "^4.9.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^20.19.14",
+    "nodemon": "^3.1.10",
+    "npm-run-all": "^4.1.5"
+  }
 }

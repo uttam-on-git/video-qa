@@ -3,7 +3,8 @@ WORKDIR /usr/src/app
 
 FROM base as deps
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+RUN corepack enable
+RUN pnpm install --frozen-lockfile --prod=false
 
 FROM base as dev
 COPY --from=deps /usr/src/app/node_modules ./node_modules
